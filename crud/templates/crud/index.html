@@ -1,0 +1,58 @@
+{% extends 'crud/base.html' %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 col-xs-2 col-sm-2"></div>
+			<div  class="col-md-8 col-xs-8 col-sm-8 ">
+				<h3 class="round3" style="text-align:center;">Posts</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 col-xs-1 col-sm-1">
+			<br/>
+            <a href="{% url 'post' %}">
+              <button type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+            </a>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		{% for post in post_list %}  
+		<div class="col-md-9 col-xs-11 col-sm-11">
+			<ul class="list-group">
+				
+		    <li class="list-group-item ">
+				<a href="{% url 'detail' post.pk %}">{{ post.title }}</a>  <span class="badge"></span>
+			</li>
+				<br>	
+		  </ul>
+			<br>
+		</div>
+		<div class="col-md-1">
+			<a href="{% url 'detail' post.pk %}">
+				<button type="button" class="btn btn-info">
+					<span class="glyphicon glyphicon-open"></span>
+				</button>
+			</a>
+		</div>
+		<div class="col-md-1">
+			<a href="{% url 'edit' post.pk %}">
+				<button type="button" class="btn btn-info">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</a>
+		</div>
+		<div class="col-md-1">
+			<a href="{% url 'delete' post.pk %}">
+				<button type="button" class="btn btn-danger">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

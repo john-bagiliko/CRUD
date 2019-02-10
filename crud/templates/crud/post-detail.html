@@ -1,0 +1,37 @@
+{% extends 'crud/base.html' %}
+{% block content %}
+<div class="container">
+<div class="row"></div>
+<br/>
+<div class="row">
+	<div class="col-md-2 col-xs-2 col-sm-2">
+    </div>
+	<div class="col-md-8 col-xs-8 col-sm-8">
+		<p class="h1">
+			{{post.title}}
+		</p>
+    </div>
+<div class="col-md-1">
+	<a href="{% url 'edit' post.pk %}">
+		<button type="button" class="btn btn-info">
+			<span class="glyphicon glyphicon-pencil"></span>
+		</button>
+	</a>
+</div>
+<div class="col-md-1">
+	<a href="{% url 'delete' post.pk %}">
+		<button type="button" class="btn btn-danger">
+			<span class="glyphicon glyphicon-trash"></span>
+		</button>
+	</a>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-2 col-xs-2 col-sm-2"></div>
+	<div class="col-md-8 col-xs-8 col-sm-8">
+	{{post.message}}
+	</div>
+	<div class="col-md-2 col-xs-2 col-sm-2"></div>
+</div>
+</div>
+{% endblock %}
