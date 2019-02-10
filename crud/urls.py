@@ -1,3 +1,7 @@
+"""
+By: John Bagiliko
+Year: 2019
+"""
 from django.urls import path
 from . import views
 
