@@ -1,0 +1,2 @@
+# CRUD
+Django CRUD app
