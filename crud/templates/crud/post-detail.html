@@ -1,37 +1,38 @@
 {% extends 'crud/base.html' %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
 <div class="row"></div>
 <br/>
 <div class="row">
-	<div class="col-md-2 col-xs-2 col-sm-2">
+	<div class="col-md-1 col-xs-1 col-sm-1">
     </div>
 	<div class="col-md-8 col-xs-8 col-sm-8">
-		<p class="h1">
+		<p class="h2">
 			{{post.title}}
 		</p>
     </div>
-<div class="col-md-1">
-	<a href="{% url 'edit' post.pk %}">
-		<button type="button" class="btn btn-info">
-			<span class="glyphicon glyphicon-pencil"></span>
-		</button>
-	</a>
-</div>
-<div class="col-md-1">
-	<a href="{% url 'delete' post.pk %}">
-		<button type="button" class="btn btn-danger">
-			<span class="glyphicon glyphicon-trash"></span>
-		</button>
-	</a>
-</div>
+	<div class="col-md-1 col-xs-1 col-sm-1">
+		<a href="{% url 'edit' post.pk %}">
+			<button type="button" class="btn btn-info">
+				<span class="glyphicon glyphicon-pencil"></span>
+			</button>
+		</a>
+	</div>
+	<div class="col-md-1 col-xs-1 col-sm-1">
+		<a href="{% url 'delete' post.pk %}">
+			<button type="button" class="btn btn-danger">
+				<span class="glyphicon glyphicon-trash"></span>
+			</button>
+		</a>
+	</div>
+	<div class="col-md-1 col-xs-1 col-sm-1"></div>
 </div>
 <div class="row">
-	<div class="col-md-2 col-xs-2 col-sm-2"></div>
-	<div class="col-md-8 col-xs-8 col-sm-8">
+	<div class="col-md-1 col-xs-1 col-sm-1"></div>
+	<div class="col-md-10 col-xs-10 col-sm-10">
 	{{post.message}}
 	</div>
-	<div class="col-md-2 col-xs-2 col-sm-2"></div>
+	<div class="col-md-1 col-xs-1 col-sm-1"></div>
 </div>
 </div>
 {% endblock %}

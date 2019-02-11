@@ -17,40 +17,42 @@
 <body>
 
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2 col-xs-2 col-sm-2"></div>
+		<div class="col-md-1 col-xs-1 col-sm-1"></div>
 	
-		<div  class="col-md-8 col-xs-8 col-sm-8 ">
+		<div  class="col-md-10 col-xs-10 col-sm-10 ">
 		<br/>
 			<h6 style="text-align:center;"><font color="red"> All fields are required</font> </h6>
 		</div>
-	<div class="col-md-3 col-xs-3 col-sm-3">
-
+		<div class="col-md-1 col-xs-1 col-sm-1">
+		</div>
 	</div>
-	<div class="col-md-6 col-xs-6 col-sm-6">
-		<form method="post" novalidate>
-		  {% csrf_token %}
+	<div class="row">
+		<div class="col-md-1 col-xs-1 col-sm-1"></div>
+		<div class="col-md-10 col-xs-10 col-sm-10">
+			<form method="post" novalidate>
+			  {% csrf_token %}
 
-		  {% for hidden_field in form.hidden_fields %}
-		    {{ hidden_field }}
-		  {% endfor %}
+			  {% for hidden_field in form.hidden_fields %}
+			    {{ hidden_field }}
+			  {% endfor %}
 
-		  {% for field in form.visible_fields %}
-		    <div class="form-group">
-		      {{ field.label_tag }}
-		      {% render_field field class="form-control" %}
-		      {% if field.help_text %}
-		        <small class="form-text text-muted">{{ field.help_text }}</small>
-		      {% endif %}
-		    </div>
-		  {% endfor %}
+			  {% for field in form.visible_fields %}
+			    <div class="form-group">
+			      {{ field.label_tag }}
+			      {% render_field field class="form-control" %}
+			      {% if field.help_text %}
+			        <small class="form-text text-muted">{{ field.help_text }}</small>
+			      {% endif %}
+			    </div>
+			  {% endfor %}
 
-		  <button type="submit" class="btn btn-primary">post</button>
-		</form>
-		<br>
-	</div>
-
+			  <button type="submit" class="btn btn-primary">post</button>
+			</form>
+			<br>
+		</div>
+		<div class="col-md-1 col-xs-1 col-sm-1"></div>
 	</div>
 </div>
 
