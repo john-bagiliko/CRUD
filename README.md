@@ -27,4 +27,4 @@ $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
 
-5. Launch your brower and navigate to http://localhost:8000/
+5. Launch your browser and navigate to http://localhost:8000/
