@@ -1,7 +1,3 @@
-"""
-By: John Bagiliko
-Year: 2019
-"""
 from django import forms
 from .models import Post
 
