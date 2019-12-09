@@ -28,3 +28,6 @@ $ python manage.py runserver
 ```
 
 5. Launch your browser and navigate to http://localhost:8000/
+
+
+You can also see the full tutorial here: https://bit.ly/2qyOwe7
